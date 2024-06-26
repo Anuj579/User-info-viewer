@@ -6,7 +6,7 @@
 }
 
 .content::-webkit-scrollbar-track {
-    background: #231123; /* background of the track */
+    background: #000; /* background of the track */
 }
 
 .content::-webkit-scrollbar-thumb {

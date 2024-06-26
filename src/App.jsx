@@ -31,13 +31,13 @@ const App = () => {
   if (error) return <Box display="flex" justifyContent="center" alignItems="center" minHeight="100vh">{error}</Box>;
 
   return (
-    <div style={{ width: '100vw', height:'100vh', display: 'flex', justifyContent: 'center', alignItems:'center'}}>
-        <div className='content' style={{ backgroundColor: '#231123', padding:'0px 20px', width:'75%', height:'85vh', overflowY:'auto', borderRadius:'10px' }}>
-          <div style={{backgroundColor:'#231123', padding:'12px 0', position:'sticky', top:'0', zIndex:'10', borderBottom:'1px solid white'}}>
-            <p style={{fontSize:'28px', fontWeight:'700', margin:'0'}}>User</p>
-          </div>
-          <UserList allusers={users} onUserSelect={handleUserSelect} />
-        </div>
+    <div style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={{ backgroundColor: '#0c1821', margin: '0 20px', padding: '12px 0px', borderRadius: '10px 10px 0 0', boxShadow: '0 2px 6px #000', width: '80%', zIndex: '1' }}>
+        <p style={{ fontSize: '28px', fontWeight: '700', margin: '0 20px', color: 'white' }}>User</p>
+      </div>
+      <div className='content' style={{ backgroundColor: '#000', width: '80%', height: '85vh', overflowY: 'auto', borderRadius: '0 0 0 10px' }}>
+        <UserList users={users} onUserSelect={handleUserSelect} />
+      </div>
     </div>
   );
 };
