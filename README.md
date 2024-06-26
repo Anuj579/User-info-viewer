@@ -2,6 +2,10 @@
 
 This is a React-based web application that displays a list of users fetched from an API. Users can click on any user to view detailed information in a dialog box. The application uses Material-UI for styling and components.
 
+## Demo
+
+Check out the live demo [here](https://userinfoviewer.netlify.app).
+
 ## Features
 
 - Displays a list of users with avatars, names, and a link to view details.
