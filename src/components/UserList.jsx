@@ -23,7 +23,7 @@ const UserList = ({ users }) => {
                     <Avatar src={user.avatar} alt='user-avatar' sx={{ width: 56, height: 56, marginRight: '10px' }} />
                     <div style={{ display: 'flex', flexDirection: 'column', }}>
                         <p style={{ fontWeight: "600", margin: '2px 0' }}>{`${user.profile.firstName} ${user.profile.lastName}`}</p>
-                        <a style={{ display: 'flex', alignItems: 'end', gap: '4px' }} onClick={() => handleClickOpen(user)}> <span>See details</span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" width={'20px'} viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <a style={{ display: 'flex', alignItems: 'end', gap: '3px' }} onClick={() => handleClickOpen(user)}> <span>See details</span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" width={'20px'} viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                         </svg>
                         </a>
