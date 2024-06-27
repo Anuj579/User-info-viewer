@@ -30,11 +30,11 @@ const UserList = ({ users }) => {
                     </div>
                 </div>
             ))}
-            <Dialog open={open} onClose={handleClose}>
+            <Dialog open={open} onClose={handleClose} >
                 {selectedUser && (
-                    <>
-                        <DialogContent>
-                            <Avatar src={selectedUser.avatar} alt='user-avatar' sx={{ width: 90, height: 90, marginBottom: '10px' }} />
+                    <div style={{backgroundColor:'#def6ff'}}>
+                        <DialogContent >
+                            <Avatar src={selectedUser.avatar} alt='user-avatar' sx={{ width: 90, height: 90, marginBottom: '10px', boxShadow:'0 0 3px #000' }} />
                             <h2>{`${selectedUser.profile.firstName} ${selectedUser.profile.lastName}`}</h2>
                             <p><span style={{ textDecoration: 'underline', color: 'black', fontWeight: '600' }}>Job title:</span> {selectedUser.jobTitle}</p>
                             <p><span style={{ textDecoration: 'underline', color: 'black', fontWeight: '600' }}>Bio:</span> {selectedUser.Bio}</p>
@@ -44,7 +44,7 @@ const UserList = ({ users }) => {
                         <DialogActions>
                             <Button variant='contained' style={{ margin: '0px 10px 10px 0' }} onClick={handleClose}>Close</Button>
                         </DialogActions>
-                    </>
+                    </div>
                 )}
             </Dialog>
         </div>
