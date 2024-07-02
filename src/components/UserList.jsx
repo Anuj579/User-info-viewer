@@ -8,12 +8,10 @@ const UserList = ({ users }) => {
     const handleClickOpen = (user) => {
         setSelectedUser(user);
         setOpen(true);
-        console.clear()
     };
 
     const handleClose = () => {
         setOpen(false);
-        console.clear()
     };
     
     return (

@@ -7,7 +7,6 @@ import './App.css'
 
 const App = () => {
   const [users, setUsers] = useState([]);
-  const [selectedUser, setSelectedUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -23,9 +22,6 @@ const App = () => {
       });
   }, []);
 
-  const handleUserSelect = (user) => {
-    setSelectedUser(user);
-  };
 
   if (loading) return <Loader />;
   if (error) return <Box display="flex" justifyContent="center" alignItems="center" minHeight="100vh">{error}</Box>;
@@ -36,7 +32,7 @@ const App = () => {
         <p style={{ fontSize: '28px', fontWeight: '700', margin: '0 20px', color: 'white' }}>User</p>
       </div>
       <div className='content' style={{ backgroundColor: '#000', width: '80%', height: '85vh', overflowY: 'auto', borderRadius: '0 0 0 10px' }}>
-        <UserList users={users} onUserSelect={handleUserSelect} />
+        <UserList users={users} />
       </div>
     </div>
   );
